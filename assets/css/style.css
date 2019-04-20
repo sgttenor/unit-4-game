@@ -1,0 +1,55 @@
+.main-container {
+   background: url("../images/background1.jpg");
+   background-size: 100%;
+  
+}
+
+h1, p {
+   text-align: center;
+   color: black;
+
+}
+
+p {
+   font-size: 25px;
+}
+.container {
+
+   margin-left: 160px;
+   padding-top: 100px;
+}
+
+.crystals {
+ display: flex;
+ justify-content: space-around;
+ align-content: center;
+ margin-right: 160px;
+ margin-left: 160px;
+
+}
+
+.crystal {
+  
+    height: 150px;
+    width: 150px;
+    border-radius: 100%; 
+    transition: box-shadow 1s, transform 2s
+
+    
+}
+
+.crystal:hover {
+   cursor: pointer;
+   box-shadow:  15px 15px  15px rgba(0, 0, 0, 0.5);
+   transition: box-shadow 1s;
+   transform: translate(5px, 40px);
+   transition: box-shadow 1s, transform 2s;
+   
+}
+
+
+images {
+   width: 50px;
+   opacity:1.6;
+   
+}
