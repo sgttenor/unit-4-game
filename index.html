@@ -11,43 +11,87 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Hello, world!</title>
-</head>
+  <title>Crystal Collector</title>
+</head <body>
+
+<div class="jumbo-container">
+
+  <div class="jumbotron">
+    <h1 class="display-4">Collect the Crystals</h1>
+    <p class="lead">try to match the target score by clicking on the right jewels.</p>
+    <br>
+    <p class="lead">Each jewel will have a random number</p>
+    <br>
+    <p class="lead">Your goal is to match the score.</p>
+  </div>
+</div>
 
 
-
-<body>
-
-
-  <div class="main-container">
-
-
-
-    <div class="container">
-
-      <h1>Crystal Collector</h1>
-
-
-      <p id="win">Wins: </p>
-      <p id="lose">Losses: </p>
-      <p id="target">Target score: </p>
-      <p id="counter">Your numbers: </p>
-
+<div class="main-container">
+  <div class="col-4-sm">
+    <h1 class="header">Crystal Collector</h1>
+  </div>
+  <div class="row emoji">
+    <div class="col-sm">
+      <h2 class="emoji"></h2>
     </div>
-    <div class="container">
+    <div class="col-sm">
+      <h2 class="emoji">
+        </h4>
+    </div>
+    <div class="col-sm">
+      <h2 class="emoji"></h2>
+    </div>
+    <div class="col-sm">
+      <h2 class="emoji"></h2>
+    </div>
+    <div class="col-sm">
+      <h2 class="emoji"></h2>
+    </div>
+    <div class="col-sm">
+      <h2 class="emoji"></h2>
+    </div>
+  </div>
 
-      <div class="crystals boxShadow">
 
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm">
+        <p id="win">💎 Wins: </p>
+        <p id="lose">💎 Losses: </p>
       </div>
-
-      <div class="container">
-
+      <div class="col-sm">
+        <p id="score-win"></p>
+        <p id="score-lose"></p>
+      </div>
+      <div class="col-sm">
+        <p id="target">💎 Target score: </p>
+        <p id="counter">💎 Your numbers: </p>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="crystals boxShadow">
       </div>
 
     </div>
 
   </div>
 
+  <div class="container">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+  </div>
 
 
   <!-- Optional JavaScript -->
@@ -62,8 +106,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-
+ 
   <script src="assets/javascript/game.js"></script>
-</body>
+  </body>
 
 </html>

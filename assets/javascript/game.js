@@ -13,10 +13,12 @@ var images = [
 var startAndReset = function () {
 
     $(".crystals").empty();
-    
-    
+    $("#score-lose").empty();
+    $("#score-win").empty();
+
+
     randomResult = Math.floor(Math.random() * 110) + 11;
-    
+
 
     $("#target").html("Target score: " + randomResult);
     for (var i = 0; i < 4; i++) {
@@ -30,16 +32,16 @@ var startAndReset = function () {
             "class": 'crystal',
             "data-random": random
         });
-         
-         crystal.css({
-            "background-image":"url('" + images[i] + "')",
-            "background-size":"cover"
-         });
-     
+
+        crystal.css({
+            "background-image": "url('" + images[i] + "')",
+            "background-size": "cover"
+        });
+
         $(".crystals").append(crystal);
 
     }
-
+    $("#counter").html("Your numbers: " + previousNumber);
 }
 
 startAndReset();
@@ -57,13 +59,14 @@ $(document).on('click', ".crystal", function () {
 
     if (previousNumber > randomResult) {
         $("#lose").html("Losses: " + losses);
-
-        losses++; 
+        $("#score-lose").html("You lose!!!");
+        losses++;
 
         previousNumber = 0;
 
         $("#counter").html("Your numbers: " + previousNumber);
         
+
 
         startAndReset();
 
@@ -71,16 +74,17 @@ $(document).on('click', ".crystal", function () {
 
         $("#win").html("Win: " + wins);
 
+        $("#score-win").html("You Win!!!");
         wins++;
 
         $("#counter").html("Your numbers: " + previousNumber);
-
+        
         previousNumber = 0;
-       
+        
         startAndReset();
     }
 
-    
+
 
 });
 
