@@ -13,7 +13,7 @@ var images = [
 var startAndReset = function () {
 
     $(".crystals").empty();
-    $("#score-lose").empty();
+  
     $("#score-win").empty();
 
 
@@ -39,9 +39,10 @@ var startAndReset = function () {
         });
 
         $(".crystals").append(crystal);
-
+       
     }
     $("#counter").html("Your numbers: " + previousNumber);
+    
 }
 
 startAndReset();
@@ -49,7 +50,7 @@ startAndReset();
 
 
 $(document).on('click', ".crystal", function () {
-
+     
 
     var num = parseInt($(this).attr('data-random'));
 
@@ -61,7 +62,8 @@ $(document).on('click', ".crystal", function () {
         $("#lose").html("Losses: " + losses);
         $("#score-lose").html("You lose!!!");
         losses++;
-
+          
+        
         previousNumber = 0;
 
         $("#counter").html("Your numbers: " + previousNumber);
@@ -73,7 +75,6 @@ $(document).on('click', ".crystal", function () {
     } else if (previousNumber === randomResult) {
 
         $("#win").html("Win: " + wins);
-
         $("#score-win").html("You Win!!!");
         wins++;
 
@@ -83,9 +84,6 @@ $(document).on('click', ".crystal", function () {
         
         startAndReset();
     }
-
-
-
 });
 
 
