@@ -2,19 +2,24 @@ var randomResult;
 var losses = 1;
 var wins = 1;
 var previousNumber = 0;
+var audio = new Audio("http://freesoundeffect.net/sites/default/files/gaining-bonus-points-sound-effect-19708252.mp3");
+var audio2 = new Audio("http://freesoundeffect.net/sites/default/files/cartoon-game-voice-you-lose-sound-effect-94607544.mp3");
 
 var images = [
     "https://www.cleanorigin.com/skin/frontend/cleanorigin/default/images/shapes/product/round.jpg",
     "https://4.imimg.com/data4/GV/NB/MY-3900003/amethyst-stone-500x500.gif",
-    "http://images6.fanpop.com/image/photos/37300000/Emerald-stone-precious-stones-37310107-238-212.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeEAsmKyFuslhVVMYLPkM4TJ9ug_hRb3KznU7t0gxOAJaVVp_v",
     "https://5.imimg.com/data5/PN/JR/MY-9933605/red-ruby-stone-500x500.jpg"
 
 ]
+
+
 var startAndReset = function () {
 
     $(".crystals").empty();
-  
+    $("#score-lose").empty();
     $("#score-win").empty();
+   
 
 
     randomResult = Math.floor(Math.random() * 110) + 11;
@@ -44,8 +49,8 @@ var startAndReset = function () {
     $("#counter").html("Your numbers: " + previousNumber);
     
 }
-
-startAndReset();
+setTimeout(startAndReset, 1000);
+//startAndReset();
 
 
 
@@ -59,6 +64,7 @@ $(document).on('click', ".crystal", function () {
     $("#counter").html("Your numbers: " + previousNumber);
 
     if (previousNumber > randomResult) {
+        audio2.play();
         $("#lose").html("Losses: " + losses);
         $("#score-lose").html("You lose!!!");
         losses++;
@@ -68,21 +74,23 @@ $(document).on('click', ".crystal", function () {
 
         $("#counter").html("Your numbers: " + previousNumber);
         
+        setTimeout(startAndReset, 1000);
 
-
-        startAndReset();
+        
 
     } else if (previousNumber === randomResult) {
-
+        audio.play();
         $("#win").html("Win: " + wins);
-        $("#score-win").html("You Win!!!");
+        $("#score-win").html("💎You Win!!!");
         wins++;
 
+        
+        
         $("#counter").html("Your numbers: " + previousNumber);
         
         previousNumber = 0;
         
-        startAndReset();
+        setTimeout(startAndReset, 1000);
     }
 });
 
