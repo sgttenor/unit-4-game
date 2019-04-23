@@ -37,7 +37,7 @@ h3 {
    }
 
    .lead, .display-4 {
-      color: red!important;
+      color: red !important;
      font-weight: 1000;
       font-family: cursive;
       font-style: italic;
